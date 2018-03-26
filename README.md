@@ -213,3 +213,10 @@ The *program3.pl* will extract the title, TI field, and abstract, AB field from 
     two 1
     well 1
     where 3
+
+___
+### Program: *program4.pl* - Nucleotide and CpG dinucleotide Statistics Report
+___
+
+The *program4.pl* allows the user to interact via CGI interface to get the "Nucleotide and CpG dinucleotide Statistics Report "	and successfully displays the statistics report back to the user in the same window as the uploaded browser window/popup window.
+___
