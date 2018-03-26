@@ -27,3 +27,31 @@ ___
     - the length of the sequence
     - the count and the fraction of the nucleotides A, C, G, T in the sequence with 2 decimal places for the fractions.
     - the count and fraction of the CpG dinucleotide for the sequence.
+
+___
+### Program: *program2.pl*
+___
+
+*program2.pl* Functionalizes the code from *cpg.pl* and is an extension of its capabilities.
+
+1 – Created a function *read_fasta*, which takes the name of a FASTA file and will open it and read the headers into an array @header and the sequences into an array @sequence. This function will use references to “send” the @header and @sequence array back to the user’s main program.
+
+2 – Created a function *write_fasta*, which takes a filename ($filename) as input and writes @header and @sequence information out to the file $filename.
+
+3- Created a function *stat_fasta*, which takes @sequence, @header, $filename and will use references to send the arrays @acounts, @ccounts, @gcounts, @tcounts, @cgcounts, @aprops, @cprops, @gprops, @tpropos, @cgprops back to the user. This function will also write out the same report file as in *cpg.pl* to the file *$filename.ot*. 
+
+4 -  Created a function *permute_fasta*, which takes the array of sequences @sequence as input and returns a new sequences array where each entry in the array is a string that is merely a random permutation of the original string. 
+
+5 – The program *program2.pl* performs the following:
+
+    Reads in a filename from the command line.
+    Calls read_fasta (let’s assume the  name is genes.fsa)
+    Calls stat_fasta (this will write genes.ot)
+    Calls permute_fasta
+    Calls write_fasta with a name like this assuming the original name was genes.fsa, genes_permute.fsa.
+    Calls stat_fasta with this new file to write out genes_permute.fsa.
+
+6 – If the program *program2.pl* is correctly configured then the a,c,g, and t couts and proportions should be identical to the program *cpg.pl*. 
+
+
+
